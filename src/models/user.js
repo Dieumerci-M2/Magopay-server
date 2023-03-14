@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-import validator from "mongoose-unique-validator"
+import mongoose from "mongoose"; 
 
 const User = new mongoose.Schema(
     {
@@ -26,6 +25,5 @@ const User = new mongoose.Schema(
     }
 );
 
-User.plugin(validator);
 
-export default mongoose.model('userData', User);
+export default mongoose.model('users', User);
