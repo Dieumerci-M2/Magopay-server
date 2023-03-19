@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import message from "statuses"
 import morgan from "morgan"
 import dotenv from "dotenv"
+import AuthRouter from "./src/routes/authRouter.js";
+import cors from "cors"
 
 const app = express();
 
@@ -22,6 +24,7 @@ app
     .use( bodyParse.json() )
     .use( express.json() )
     .use( morgan( 'dev' ) )
+    .use( cors(), AuthRouter )
     
     
 
