@@ -24,7 +24,8 @@ app
     .use( bodyParse.json() )
     .use( express.json() )
     .use( morgan( 'dev' ) )
-    .use( cors(), AuthRouter )
+    .use( cors() )
+    .use( "/magopay", AuthRouter )
     
     
 

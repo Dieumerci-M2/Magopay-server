@@ -18,7 +18,7 @@ const register = async(req, res) => {
             })
             .catch((error)=>{
                 console.log(error);
-                res.status(400).json({status : 400, error, message: "Erreur d'enregistrement !"})
+                res.status(400).json({status : 400, error, message: "Erreur d'enregistrement ! Verifie votre adresse mail, il se peut qu'il existe déjà !!!!"})
             })
     } else {
         res.status(500).json({ message : "Les données que vous avez entré sont pas correct !" })
