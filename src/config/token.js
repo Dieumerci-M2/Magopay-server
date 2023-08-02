@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 
-const token = (id) => jwt.sign({ id }, "USER_TOKEN_FOR_LOGIN_ACCOUNT_IN_MAGOPAY_APPLICATION", { expiresIn : "24h"})
+const token = (id) => jwt.sign({ id }, process.env.USER_TOKEN, { expiresIn : "24h"})
 
 
 export default token;
