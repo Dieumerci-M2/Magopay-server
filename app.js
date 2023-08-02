@@ -10,7 +10,7 @@ import cors from "cors"
 const app = express();
 
 dotenv.config();
-mongoose.connect('mongodb+srv://Magopay-server:Magopay-server@magopay.k9brlp1.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGO_CONNECTION,
     { 
         useNewUrlParser: true,
         useUnifiedTopology: true 
